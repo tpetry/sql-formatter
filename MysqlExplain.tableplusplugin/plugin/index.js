@@ -21,7 +21,7 @@ function handleResults(context, sql, resExplainJson, resExplainTraditional, resE
     };
 
     context
-        .loadFile(`${Application.pluginRootPath()}/com.explainmysql.tableplusplugin/ui.html`, null)
+        .loadFile(`${Application.pluginRootPath()}/com.explainmysql.tableplusplugin/build/ui.html`, null)
         .evaluate(`submitPlan(${JSON.stringify(data)})`);
 }
 
