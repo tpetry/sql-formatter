@@ -1,11 +1,11 @@
 const path = require('path');
 
 const config = {
-    entry: './main.js',
+    entry: './plugin/index.js',
     mode: 'production',
     output: {
     	path: path.resolve(__dirname, './build'),
-    	filename: './plugin.js',
+    	filename: 'plugin.js',
     },
 };
 

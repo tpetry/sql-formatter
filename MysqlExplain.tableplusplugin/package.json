@@ -2,7 +2,7 @@
   "name": "com.explainmysql.tableplusplugin",
   "version": "1.0.0",
   "description": "This plugin helps you analyzing EXPLAIN plans.",
-  "main": "main.js",
+  "main": "plugin/index.js",
   "scripts": {
     "build": "webpack"
   },

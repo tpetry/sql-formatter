@@ -1,6 +1,6 @@
 'use strict';
 
-import { executeQuery } from './library/helper';
+import { executeQuery } from './helpers';
 
 function handleResults(context, sql, resExplainJson, resExplainTraditional, resExplainTree, resVersion, resWarnings) {
     for (const res of [resExplainJson, resExplainTraditional, resVersion, resWarnings]) {
