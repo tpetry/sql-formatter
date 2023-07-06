@@ -13,10 +13,10 @@ function handleResults(context, sql, resExplainJson, resExplainTraditional, resE
 
     const api = {
         query: sql,
-        version: resVersion[0].version,
+        version: resVersion[0]?.version,
         explain_traditional: resExplainTraditional,
-        explain_json: resExplainJson[0].EXPLAIN,
-        explain_tree: (resExplainTree instanceof Error) ? null : resExplainTree[0].EXPLAIN,
+        explain_json: resExplainJson[0]?.EXPLAIN,
+        explain_tree: resExplainTree[0]?.EXPLAIN ?? null,
         warnings: resWarnings,
     };
     SystemService.insertToClipboard(JSON.stringify(api, null, 4));
