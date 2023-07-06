@@ -11,7 +11,7 @@ function handleResults(context, sql, resExplainJson, resExplainTraditional, resE
         }
     }
 
-    const api = {
+    const data = {
         query: sql,
         version: resVersion[0]?.version,
         explain_traditional: resExplainTraditional,
@@ -19,8 +19,10 @@ function handleResults(context, sql, resExplainJson, resExplainTraditional, resE
         explain_tree: resExplainTree[0]?.EXPLAIN ?? null,
         warnings: resWarnings,
     };
-    SystemService.insertToClipboard(JSON.stringify(api, null, 4));
-    SystemService.notify('Query executed', 'EXPLAIN information collected');
+
+    context
+        .loadFile(`${Application.pluginRootPath()}/com.explainmysql.tableplusplugin/ui.html`, null)
+        .evaluate(`submitPlan(${JSON.stringify(data)})`);
 }
 
 global.onRun = function(context) {

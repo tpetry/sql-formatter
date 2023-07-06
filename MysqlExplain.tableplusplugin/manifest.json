@@ -1,6 +1,6 @@
 {
     "name": "MySQL Explain",
-    "identifier": "com.explainmysql.tableplus",
+    "identifier": "com.explainmysql",
     "version": "1.0",
     "detail": "This plugin helps with analyzing EXPLAIN plans.",
     "author": "Tobias Petry",
