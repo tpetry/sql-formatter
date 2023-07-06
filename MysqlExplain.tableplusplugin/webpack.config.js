@@ -10,8 +10,9 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.html$/i,
-                loader: 'html-loader',
+                test: /\.css$/i,
+                include: path.resolve(__dirname, 'ui'),
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
         ],
     },

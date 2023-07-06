@@ -22,7 +22,7 @@ function handleResults(context, sql, resExplainJson, resExplainTraditional, resE
 
     context
         .loadFile(`${Application.pluginRootPath()}/com.explainmysql.tableplusplugin/build/ui.html`, null)
-        .evaluate(`submitPlan(${JSON.stringify(data)})`);
+        .evaluate(`submitPlan(${JSON.stringify(data, (_, value) => typeof value === 'undefined' ? null : value)})`);
 }
 
 global.onRun = function(context) {

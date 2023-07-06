@@ -1,3 +1,5 @@
+import './index.css';
+
 import Alpine from 'alpinejs';
 import Clipboard from '@ryangjchandler/alpine-clipboard';
 import Tooltip from '@ryangjchandler/alpine-tooltip';
