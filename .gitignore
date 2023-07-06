@@ -1,6 +1,3 @@
-# OS File
-.DS_Store
-
-# Npm
-node_modules
-format.js
+.idea/
+MysqlExplain.tableplusplugin/build/
+MysqlExplain.tableplusplugin/node_modules/

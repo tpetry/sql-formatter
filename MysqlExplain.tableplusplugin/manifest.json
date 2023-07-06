@@ -1,0 +1,17 @@
+{
+    "name": "MySQL Explain",
+    "identifier": "com.explainmysql.tableplus",
+    "version": "1.0",
+    "detail": "This plugin helps with analyzing EXPLAIN plans.",
+    "author": "Tobias Petry",
+    "authorEmail": "hello@tpetry.me",
+    "scripts": [
+        {
+            "location": "main",
+            "type": "action",
+            "shortcut": "control+e",
+            "script": "build/plugin.js",
+            "name": "Explain SQL"
+        }
+    ]
+}
