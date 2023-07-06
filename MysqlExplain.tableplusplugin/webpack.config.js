@@ -4,6 +4,7 @@ const path = require('path');
 const config = {
     entry: {
         'plugin.js': './plugin/index.js',
+        'ui.js': './ui/index.js',
     },
     mode: 'production',
     module: {
